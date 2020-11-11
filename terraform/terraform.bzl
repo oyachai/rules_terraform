@@ -1,6 +1,6 @@
 
 toolchains = {
-    "macos_amd64": {
+    "darwin_amd64": {
         "os": "darwin",
         "arch": "amd64",
         "sha": "2c2d9d435712f4be989738b7899917ced7c12ab05b8ddc14359ed4ddb1bc9375",
