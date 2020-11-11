@@ -3,7 +3,7 @@ toolchains = {
     "darwin_amd64": {
         "os": "darwin",
         "arch": "amd64",
-        "sha": "2c2d9d435712f4be989738b7899917ced7c12ab05b8ddc14359ed4ddb1bc9375",
+        "sha": "893050bcfc5e7445acd3a30f1500227b989b29cbd958ca64a8233589194a198d",
         "exec_compatible_with": [
             "@platforms//os:osx",
             "@platforms//cpu:x86_64",
@@ -16,7 +16,7 @@ toolchains = {
     "linux_i386": {
         "os": "linux",
         "arch": "386",
-        "sha": "93ac24326034eb269d68f2face60bcec5d3af90fc7dfc68b058c66dc5c139e25",
+        "sha": "1c489282d86b16f2d5f89f38071c6dabd948a4ca7cc4e42915e604b82564f3a6",
         "exec_compatible_with": [
             "@platforms//os:linux",
             "@platforms//cpu:i386",
@@ -29,7 +29,7 @@ toolchains = {
     "linux_amd64": {
         "os": "linux",
         "arch": "amd64",
-        "sha": "43806e68f7af396449dd4577c6e5cb63c6dc4a253ae233e1dddc46cf423d808b",
+        "sha": "be99da1439a60942b8d23f63eba1ea05ff42160744116e84f46fc24f1a8011b6",
         "exec_compatible_with": [
             "@platforms//os:linux",
             "@platforms//cpu:x86_64",
@@ -42,7 +42,7 @@ toolchains = {
     "windows_amd64": {
         "os": "windows",
         "arch": "amd64",
-        "sha": "3d0c41c514841ef38645acdefe3f70f8376e7d8de55828c50087083bd34e9c20",
+        "sha": "cd524b5b6b7cd9eec9c4e49aa37cbcb34ed1395876c212f6dde84c6e57d6ce1c",
         "exec_compatible_with": [
             "@platforms//os:windows",
             "@platforms//cpu:x86_64",
@@ -81,7 +81,7 @@ def _format_url(version, os, arch):
     return url_template.format(version = version, os = os, arch = arch)
 
 
-def declare_terraform_toolchains(version):
+def declare_terraform_toolchains(version = "0.12.28"):
     for key, info in toolchains.items():
         url =_format_url(version, info["os"], info["arch"])
         name = "terraform_{}".format(key)
